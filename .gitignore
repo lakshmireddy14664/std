@@ -1,0 +1,26 @@
+# Virtual environments
+venv/
+env/
+myvenv/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Databases & logs
+*.sqlite3
+*.db
+*.log
+
+# Flask / Python environment files
+.env
+.flaskenv
+instance/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Test / build cache
+.pytest_cache/
