@@ -1,0 +1,35 @@
+name: Student management workflow
+
+on: 
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+     
+      - name: Dummy Step 1 - Print Hello
+        run: echo "Hello from Dummy Step 1"
+
+      - name: Dummy Step 2 - Create Temporary File
+        run: echo "Temporary data" > temp.txt
+
+      - name: Dummy Step 3 - List Files
+        run: ls -la
+
+      - name: Dummy Step 4 - Display Current Directory
+        run: pwd
+
+      
+      - name: checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
