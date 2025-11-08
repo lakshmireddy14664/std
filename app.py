@@ -17,6 +17,8 @@ class Students(db.Model):
     student_class = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(100), nullable=False)
 
+with app.app_context():
+        db.create_all()
 # ******* Routes ******
 
 @app.route('/')
@@ -80,6 +82,5 @@ def delete_student(id):
     return redirect(url_for('home'))
 
 if __name__ == "__main__":
-    with app.app_context():
-        db.create_all()
+    
     app.run(debug=True)
